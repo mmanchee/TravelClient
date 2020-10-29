@@ -1,0 +1,21 @@
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Review Info:</h1>
+<ul>
+    <li>ID: @Model.ReviewId</li>
+    <li>City: @Model.City</li>
+    <li>Country: @Model.Country</li>
+    <li>Rating: @Model.Rating</li>
+    <li>Review: @Model.Details</li>
+    <li>Date Visited: @Model.Visited</li>
+</ul>
+<br>
+
+<a href="/Reviews/Edit/@(Model.ReviewId)"><p>Edit</p></a>
+<br>
+
+<a href="/Reviews"><p>Return</p></a>
+
+<a href="/Reviews/Delete/@(Model.ReviewId)"><p>DELETE Review</p></a>

@@ -2,17 +2,18 @@
     ViewData["Title"] = "Home Page";
 }
 
-<h1>All Animals:</h1>
+<h1>All Reviews:</h1>
 
 <ol>
-    @foreach (Animal animal in Model)
+    @foreach (Review review in Model)
     {
         <ul>
-            <li>ID: @animal.AnimalId</li>
-            <li>Name: @animal.Name</li>
-            <li>Species: @animal.Species</li>
-            <li>Age: @animal.Age</li>
-            <li>Gender: @animal.Gender</li>
+            <li>ID: @review.ReviewId</li>
+            <li>City: @review.City</li>
+            <li>Country: @review.Country</li>
+            <li>Details: @review.Details</li>
+            <li>Rating: @review.Rating</li>
+            <li>Date Visited: @review.Visited</li>
         </ul>
         <br>
     }
