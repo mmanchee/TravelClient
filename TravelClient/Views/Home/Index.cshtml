@@ -2,7 +2,18 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<h1>All Animals:</h1>
+
+<ol>
+    @foreach (Animal animal in Model)
+    {
+        <ul>
+            <li>ID: @animal.AnimalId</li>
+            <li>Name: @animal.Name</li>
+            <li>Species: @animal.Species</li>
+            <li>Age: @animal.Age</li>
+            <li>Gender: @animal.Gender</li>
+        </ul>
+        <br>
+    }
+</ol>
