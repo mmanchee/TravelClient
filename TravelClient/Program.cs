@@ -11,9 +11,9 @@ using Microsoft.Extensions.Logging;
 
 namespace TravelClient
 {
-    public class Program
-    {
-        static void Main()
+  public class Program
+  {
+    static void Main()
     {
       var apiCallTask = ApiHelper.ApiCall("[YOUR-API-KEY-HERE]");
       var result = apiCallTask.Result;
