@@ -20,24 +20,24 @@ namespace TravelClient.Controllers
       Review.Post(review);
       return RedirectToAction("Index");
     }
-    public ActionResult Details(int id)
+    public IActionResult Details(int id)
     {
       var review = Review.GetDetails(id);
       return View(review);
     }
-    public ActionResult Edit(int id)
+    public IActionResult Edit(int id)
     {
       var review = Review.GetDetails(id);
       return View(review);
     }
     [HttpPost]
-    public ActionResult Details(int id, Review review)
+    public IActionResult Details(int id, Review review)
     {
       review.ReviewId = id;
       Review.Put(review);
       return RedirectToAction("Details", id);
     }
-    public ActionResult Delete(int id)
+    public IActionResult Delete(int id)
     {
       Review.Delete(id);
       return RedirectToAction("Index");

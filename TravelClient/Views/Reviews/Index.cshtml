@@ -1,5 +1,5 @@
 @{
-    ViewData["Title"] = "Home Page";
+  ViewData["Title"] = "Home Page";
 }
 
 <h1>New Location Review:</h1>
@@ -19,19 +19,20 @@
 </form>
 
 <h1>All Reviews:</h1>
-
 <ol>
-@foreach (Review review in Model)
-{
+  @foreach (Review review in Model)
+  {
     <ul>
-        <li>ID: @review.ReviewId</li>
-        <li>City: @review.City</li>
-        <li>Country: @review.Country</li>
-        <li>Details: @review.Details</li>
-        <li>Rating: @review.Rating</li>
-        <li>Date Visited: @review.Visited</li>
+      <li>ID: @review.ReviewId</li>
+      <li>City: @review.City</li>
+      <li>Country: @review.Country</li>
+      <li>Details: @review.Details</li>
+      <li>Rating: @review.Rating</li>
+      <li>Date Visited: @review.Visited</li>
     </ul>
-    <a href="/Reviews/Details/@(review.ReviewId)"><p>View Details</p></a>
+    <a href="/Reviews/Details/@(review.ReviewId)">
+      <p>View Details</p>
+    </a>
     <br>
-}
+  }
 </ol>

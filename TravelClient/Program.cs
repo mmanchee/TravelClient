@@ -13,7 +13,7 @@ namespace TravelClient
 {
   public class Program
   {
-    static void Main()
+    static void Main(string[] args)
     {
       CreateWebHostBuilder(args).Build().Run();
     }
